@@ -11,17 +11,6 @@ spring:
       host: localhost
       port: 27017
       authentication-database: admin
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-logging:
-  level:
-    root: INFO
-    org:
-      springframework:
-        security: trace
 mail:
   protocol: "smtp"
   host: "smtp.gmail.com"
@@ -45,17 +34,7 @@ spring:
       host: mongo
       port: 27017
       authentication-database: admin
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-logging:
-  level:
-    root: INFO
-    org:
-      springframework:
-        security: trace
+
 mail:
   protocol: "smtp"
   host: "smtp.gmail.com"
@@ -79,17 +58,6 @@ spring:
       host: mongo
       port: 27017
       authentication-database: admin
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-logging:
-  level:
-    root: INFO
-    org:
-      springframework:
-        security: trace
 mail:
   protocol: "smtp"
   host: "smtp.gmail.com"

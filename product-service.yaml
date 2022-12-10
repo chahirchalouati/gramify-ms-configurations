@@ -1,16 +1,5 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-logging:
-  level:
-    root: INFO
-    org:
-      springframework:
-        cloud:
-          gateway:
-            filter: TRACE
+server:
+  port: 7005
 ---
 spring:
   config:
@@ -154,8 +143,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://auth-server:9000
-          jwk-set-uri: http://auth-server:9000/oauth2/jwks
+          issuer-uri: http://authentication-service:9000
+          jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
           product-client-oidc:
@@ -170,10 +159,10 @@ spring:
             client-id: product-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://127.0.0.1:7005/authorized"
+            redirect-uri: "http://product-service:7005/authorized"
             scope: product.read
             client-name: product-client-authorization-code
         provider:
           spring:
-            issuer-uri: http://auth-server:9000
+            issuer-uri: http://authentication-service:9000
 

@@ -1,0 +1,151 @@
+server:
+  port: 9999
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+    gateway:
+      routes:
+        - id: product-service
+          uri: http://localhost:7005
+          predicates:
+            - Path=/product/**
+        - id: configuration-service
+          uri: http://localhost:8888
+          predicates:
+            - Path=/config/**
+        - id: order-service
+          uri: http://localhost:7001
+          predicates:
+            - Path=/order/**
+        - id: authentication-service
+          uri: http://localhost:9000
+          predicates:
+            - Path=/Oauth/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+          jwk-set-uri: http://auth-server:9000/oauth2/jwks
+      client:
+        registration:
+          proxy-client-oidc:
+            provider: spring
+            client-id: proxy-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            redirect-uri: "http://127.0.0.1:9999/login/oauth2/code/{registrationId}"
+            scope: openid
+          proxy-client-authorization-code:
+            provider: spring
+            client-id: proxy-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            redirect-uri: "http://127.0.0.1:9999/authorized"
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+    gateway:
+      routes:
+        - id: notification-service
+          uri: http://notification-service:7008
+          predicates:
+            - Path=/notification/**
+        - id: product-service
+          uri: http://product-service:7005
+          predicates:
+            - Path=/product/**
+        - id: configuration-service
+          uri: http://configuration-service:8888
+          predicates:
+            - Path=/config/**
+        - id: order-service
+          uri: http://order-service:7001
+          predicates:
+            - Path=/order/**
+        - id: authentication-service
+          uri: http://authentication-service:9000
+          predicates:
+            - Path=/Oauth/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://authentication-service:9000
+          jwk-set-uri: http://authentication-service:9000/oauth2/jwks
+      client:
+        registration:
+          proxy-client-oidc:
+            provider: spring
+            client-id: proxy-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            redirect-uri: "http://authentication-service:9999/login/oauth2/code/{registrationId}"
+            scope: openid
+          proxy-client-authorization-code:
+            provider: spring
+            client-id: proxy-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            redirect-uri: "http://authentication-service:9999/authorized"
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+    gateway:
+      routes:
+        - id: notification-service
+          uri: http://notification-service:7008
+          predicates:
+            - Path=/notification/**
+        - id: product-service
+          uri: http://product-service:7005
+          predicates:
+            - Path=/product/**
+        - id: configuration-service
+          uri: http://configuration-service:8888
+          predicates:
+            - Path=/config/**
+        - id: order-service
+          uri: http://order-service:7001
+          predicates:
+            - Path=/order/**
+        - id: authentication-service
+          uri: http://authentication-service:9000
+          predicates:
+            - Path=/Oauth/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://authentication-service:9000
+          jwk-set-uri: http://authentication-service:9000/oauth2/jwks
+      client:
+        registration:
+          proxy-client-oidc:
+            provider: spring
+            client-id: proxy-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            redirect-uri: "http://authentication-service:9999/login/oauth2/code/{registrationId}"
+            scope: openid
+          proxy-client-authorization-code:
+            provider: spring
+            client-id: proxy-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            redirect-uri: "http://authentication-service:9999/authorized"
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000

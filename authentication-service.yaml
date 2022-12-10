@@ -35,19 +35,6 @@ spring:
       host: localhost
       port: 27017
       authentication-database: admin
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-logging:
-  level:
-    root: INFO
-    org:
-      springframework:
-        security: trace
-mongock:
-  change-logs-scan-package: com.code.dremear.authenticationservice.migration
 ---
 spring:
   config:

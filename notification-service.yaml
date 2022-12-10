@@ -1,6 +1,6 @@
----
 server:
   port: 7008
+---
 spring:
   config:
     activate:
@@ -15,15 +15,13 @@ mail:
   protocol: "smtp"
   host: "smtp.gmail.com"
   port: 587
-  username: ""
-  password: ""
-  defaultEncoding: ""
+  username: "mail@mail.com"
+  password: "password"
+  defaultEncoding: "UTF-8"
   auth: true
   debug: true
   enable-tls: true
 ---
-server:
-  port: 7008
 spring:
   config:
     activate:
@@ -46,8 +44,6 @@ mail:
   debug: true
   enable-tls: true
 ---
-server:
-  port: 7008
 spring:
   config:
     activate:

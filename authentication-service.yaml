@@ -1,0 +1,74 @@
+server:
+  port: 9000
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  data:
+    mongodb:
+      database: authentication_dev
+      host: localhost
+      port: 27017
+      authentication-database: admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: trace
+mongock:
+  change-logs-scan-package: com.code.dremear.authenticationservice.migration
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+  data:
+    mongodb:
+      database: authentication_test
+      host: localhost
+      port: 27017
+      authentication-database: admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: trace
+mongock:
+  change-logs-scan-package: com.code.dremear.authenticationservice.migration
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  data:
+    mongodb:
+      database: authentication_test
+      host: localhost
+      port: 27017
+      authentication-database: admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: trace
+mongock:
+  change-logs-scan-package: com.code.dremear.authenticationservice.migration

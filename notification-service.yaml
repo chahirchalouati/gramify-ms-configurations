@@ -47,7 +47,7 @@ mail:
 spring:
   config:
     activate:
-      on-profile: dev
+      on-profile: prod
   data:
     mongodb:
       database: notification_test

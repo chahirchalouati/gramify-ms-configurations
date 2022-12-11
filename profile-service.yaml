@@ -1,5 +1,5 @@
 server:
-  port: 7008
+  port: 7009
 ---
 spring:
   config:
@@ -7,7 +7,7 @@ spring:
       on-profile: dev
   data:
     mongodb:
-      database: notification_test
+      database: profile_test
       host: localhost
       port: 27017
       authentication-database: admin
@@ -19,33 +19,24 @@ spring:
           jwk-set-uri: http://auth-server:9000/oauth2/jwks
       client:
         registration:
-          notification-client-oidc:
+          profile-client-oidc:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: notification-client-oidc
-          notification-client-authorization-code:
+            client-name: profile-client-oidc
+          profile-client-authorization-code:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: notification.read,notification.write
-            client-name: notification-client-authorization-code
+            scope: profile.read,profile.write
+            client-name: profile-client-authorization-code
         provider:
           spring:
             issuer-uri: http://auth-server:9000
-mail:
-  protocol: "smtp"
-  host: "smtp.gmail.com"
-  port: 587
-  username: "mail@mail.com"
-  password: "password"
-  defaultEncoding: "UTF-8"
-  auth: true
-  debug: true
-  enable-tls: true
+
 ---
 spring:
   config:
@@ -53,7 +44,7 @@ spring:
       on-profile: docker
   data:
     mongodb:
-      database: notification_test
+      database: profile_test
       host: mongo
       port: 27017
       authentication-database: admin
@@ -65,33 +56,23 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          notification-client-oidc:
+          profile-client-oidc:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: notification-client-oidc
-          notification-client-authorization-code:
+            client-name: profile-client-oidc
+          profile-client-authorization-code:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: notification.read,notification.write
-            client-name: notification-client-authorization-code
+            scope: profile.read,profile.write
+            client-name: profile-client-authorization-code
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
-mail:
-  protocol: "smtp"
-  host: "smtp.gmail.com"
-  port: 587
-  username: ""
-  password: ""
-  defaultEncoding: ""
-  auth: true
-  debug: true
-  enable-tls: true
 ---
 spring:
   config:
@@ -99,7 +80,7 @@ spring:
       on-profile: prod
   data:
     mongodb:
-      database: notification_test
+      database: profile_test
       host: mongo
       port: 27017
       authentication-database: admin
@@ -111,30 +92,20 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          notification-client-oidc:
+          profile-client-oidc:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: notification-client-oidc
-          notification-client-authorization-code:
+            client-name: profile-client-oidc
+          profile-client-authorization-code:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: notification.read,notification.write
-            client-name: notification-client-authorization-code
+            scope: profile.read,profile.write
+            client-name: profile-client-authorization-code
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
-mail:
-  protocol: "smtp"
-  host: "smtp.gmail.com"
-  port: 587
-  username: ""
-  password: ""
-  defaultEncoding: ""
-  auth: true
-  debug: true
-  enable-tls: true

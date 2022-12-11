@@ -11,21 +11,25 @@ spring:
       host: localhost
       port: 27017
       authentication-database: admin
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-logging:
-  level:
-    root: INFO
-    org:
-      springframework:
-        security: trace
 mongock:
   change-logs-scan-package: com.code.dremear.authenticationservice.migration
 security:
   issuer: http://auth-server:9000
+  product-client:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
+  proxy-client:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
+  order-client:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
+  product-ui:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
+  notification_client:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
 ---
 spring:
   config:
@@ -48,18 +52,22 @@ spring:
       host: localhost
       port: 27017
       authentication-database: admin
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-logging:
-  level:
-    root: INFO
-    org:
-      springframework:
-        security: trace
 mongock:
   change-logs-scan-package: com.code.dremear.authenticationservice.migration
 security:
   issuer: http://auth-server:9000
+  product-client:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
+  proxy-client:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
+  order-client:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
+  product-ui:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500
+  notification_client:
+    refresh-token-access-time-to-leave: 5000
+    token-access-time-to-leave: 500

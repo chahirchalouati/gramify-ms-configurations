@@ -24,6 +24,8 @@ logging:
         security: trace
 mongock:
   change-logs-scan-package: com.code.dremear.authenticationservice.migration
+security:
+  issuer: http://auth-server:9000
 ---
 spring:
   config:
@@ -59,3 +61,5 @@ logging:
         security: trace
 mongock:
   change-logs-scan-package: com.code.dremear.authenticationservice.migration
+security:
+  issuer: http://auth-server:9000

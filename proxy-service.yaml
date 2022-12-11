@@ -40,14 +40,12 @@ spring:
             client-id: proxy-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://127.0.0.1:9999/login/oauth2/code/{registrationId}"
             scope: openid
           proxy-client-authorization-code:
             provider: spring
             client-id: proxy-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://127.0.0.1:9999/authorized"
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -91,14 +89,12 @@ spring:
             client-id: proxy-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://authentication-service:9999/login/oauth2/code/{registrationId}"
             scope: openid
           proxy-client-authorization-code:
             provider: spring
             client-id: proxy-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://authentication-service:9999/authorized"
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -142,14 +138,12 @@ spring:
             client-id: proxy-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://authentication-service:9999/login/oauth2/code/{registrationId}"
             scope: openid
           proxy-client-authorization-code:
             provider: spring
             client-id: proxy-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://authentication-service:9999/authorized"
         provider:
           spring:
             issuer-uri: http://auth-server:9000

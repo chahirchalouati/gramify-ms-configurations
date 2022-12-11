@@ -48,7 +48,6 @@ spring:
             client-id: order-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://127.0.0.1:7001/authorized"
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -100,7 +99,6 @@ spring:
             client-id: order-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://order-service:7001/authorized"
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
@@ -152,7 +150,6 @@ spring:
             client-id: order-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            redirect-uri: "http://order-service:7001/authorized"
         provider:
           spring:
             issuer-uri: http://authentication-service:9000

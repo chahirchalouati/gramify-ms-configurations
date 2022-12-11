@@ -17,20 +17,20 @@ security:
   issuer: http://auth-server:9000
   clientsProps:
     product-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     proxy-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     order-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     product-ui:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     notification_client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
 ---
 spring:
   config:
@@ -48,20 +48,20 @@ security:
   issuer: http://auth-server:9000
   clientsProps:
     product-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     proxy-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     order-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     product-ui:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     notification_client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
 ---
 spring:
   config:
@@ -79,17 +79,17 @@ security:
   issuer: http://auth-server:9000
   clientsProps:
     product-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     proxy-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     order-client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     product-ui:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
     notification_client:
-      refresh-token-access-time-to-leave: 5000
-      token-access-time-to-leave: 500
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000

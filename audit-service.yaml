@@ -12,7 +12,12 @@ spring:
       contact-points: localhost
       local-datacenter: datacenter1
       schema-action: create_if_not_exists
-
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+          jwk-set-uri: http://auth-server:9000/oauth2/jwks
 ---
 spring:
   config:
@@ -25,6 +30,12 @@ spring:
       contact-points: cassandra
       local-datacenter: datacenter1
       schema-action: create_if_not_exist
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+          jwk-set-uri: http://auth-server:9000/oauth2/jwks
 ---
 spring:
   config:
@@ -37,3 +48,9 @@ spring:
       contact-points: cassandra
       local-datacenter: datacenter1
       schema-action: create_if_not_exist
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+          jwk-set-uri: http://auth-server:9000/oauth2/jwks

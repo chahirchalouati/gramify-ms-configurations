@@ -21,18 +21,18 @@ spring:
         registration:
           notification-client-oidc:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: notification-client-oidc
+            client-name: profile-client-oidc
           notification-client-authorization-code:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: notification.read,notification.write
-            client-name: notification-client-authorization-code
+            scope: profile.read,profile.write
+            client-name: profile-client-authorization-code
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -67,18 +67,18 @@ spring:
         registration:
           notification-client-oidc:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: notification-client-oidc
+            client-name: profile-client-oidc
           notification-client-authorization-code:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: notification.read,notification.write
-            client-name: notification-client-authorization-code
+            scope: profile.read,profile.write
+            client-name: profile-client-authorization-code
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
@@ -113,18 +113,18 @@ spring:
         registration:
           notification-client-oidc:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: notification-client-oidc
+            client-name: profile-client-oidc
           notification-client-authorization-code:
             provider: spring
-            client-id: notification-client
+            client-id: profile-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: notification.read,notification.write
-            client-name: notification-client-authorization-code
+            scope: profile.read,profile.write
+            client-name: profile-client-authorization-code
         provider:
           spring:
             issuer-uri: http://authentication-service:9000

@@ -12,7 +12,7 @@ spring:
       port: 27017
       authentication-database: admin
 mongock:
-  change-logs-scan-package: com.code.dremear.authenticationservice.migration
+  change-logs-scan-package: com.crcl.authenticationservice.migration
 security:
   issuer: http://auth-server:9000
   clientsProps:
@@ -43,7 +43,7 @@ spring:
       port: 27017
       authentication-database: admin
 mongock:
-  change-logs-scan-package: com.code.dremear.authenticationservice.migration
+  change-logs-scan-package: com.crcl.authenticationservice.migration
 security:
   issuer: http://auth-server:9000
   clientsProps:
@@ -74,7 +74,7 @@ spring:
       port: 27017
       authentication-database: admin
 mongock:
-  change-logs-scan-package: com.code.dremear.authenticationservice.migration
+  change-logs-scan-package: com.crcl.authenticationservice.migration
 security:
   issuer: http://auth-server:9000
   clientsProps:

@@ -37,13 +37,13 @@ spring:
           jwk-set-uri: http://auth-server:9000/oauth2/jwks
       client:
         registration:
-          product-client-oidc:
+          post-client-oidc:
             provider: spring
             client-id: order-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          product-client-authorization-code:
+          post-client-authorization-code:
             provider: spring
             client-id: order-client
             client-secret: secret
@@ -88,13 +88,13 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          product-client-oidc:
+          post-client-oidc:
             provider: spring
             client-id: order-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          product-client-authorization-code:
+          post-client-authorization-code:
             provider: spring
             client-id: order-client
             client-secret: secret
@@ -139,13 +139,13 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          product-client-oidc:
+          post-client-oidc:
             provider: spring
             client-id: order-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          product-client-authorization-code:
+          post-client-authorization-code:
             provider: spring
             client-id: order-client
             client-secret: secret

@@ -16,7 +16,7 @@ mongock:
 security:
   issuer: http://auth-server:9000
   clientsProps:
-    product-client:
+    post-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     proxy-client:
@@ -25,7 +25,7 @@ security:
     order-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-    product-ui:
+    ui-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     notification_client:
@@ -47,7 +47,7 @@ mongock:
 security:
   issuer: http://auth-server:9000
   clientsProps:
-    product-client:
+    post-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     proxy-client:
@@ -56,7 +56,7 @@ security:
     order-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-    product-ui:
+    ui-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     notification_client:
@@ -78,7 +78,7 @@ mongock:
 security:
   issuer: http://auth-server:9000
   clientsProps:
-    product-client:
+    post-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     proxy-client:
@@ -87,7 +87,7 @@ security:
     order-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-    product-ui:
+    ui-client:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     notification_client:

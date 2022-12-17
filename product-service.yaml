@@ -6,7 +6,7 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/test_product?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/test_post?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -37,20 +37,20 @@ spring:
           jwk-set-uri: http://auth-server:9000/oauth2/jwks
       client:
         registration:
-          product-client-oidc:
+          post-client-oidc:
             provider: spring
-            client-id: product-client
+            client-id: post-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: product-client-oidc
-          product-client-authorization-code:
+            client-name: post-client-oidc
+          post-client-authorization-code:
             provider: spring
-            client-id: product-client
+            client-id: post-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: product.read
-            client-name: product-client-authorization-code
+            scope: post.read
+            client-name: post-client-authorization-code
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -60,7 +60,7 @@ spring:
     activate:
       on-profile: docker
   datasource:
-    url: jdbc:mysql://mysql-db:3306/docker_product?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql-db:3306/docker_post?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -91,20 +91,20 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          product-client-oidc:
+          post-client-oidc:
             provider: spring
-            client-id: product-client
+            client-id: post-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: product-client-oidc
-          product-client-authorization-code:
+            client-name: post-client-oidc
+          post-client-authorization-code:
             provider: spring
-            client-id: product-client
+            client-id: post-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: product.read
-            client-name: product-client-authorization-code
+            scope: post.read
+            client-name: post-client-authorization-code
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
@@ -114,7 +114,7 @@ spring:
     activate:
       on-profile: prod
   datasource:
-    url: jdbc:mysql://mysql-db:3306/prod_product?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql-db:3306/prod_post?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -145,20 +145,20 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          product-client-oidc:
+          post-client-oidc:
             provider: spring
-            client-id: product-client
+            client-id: post-client
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: product-client-oidc
-          product-client-authorization-code:
+            client-name: post-client-oidc
+          post-client-authorization-code:
             provider: spring
-            client-id: product-client
+            client-id: post-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: product.read
-            client-name: product-client-authorization-code
+            scope: post.read
+            client-name: post-client-authorization-code
         provider:
           spring:
             issuer-uri: http://authentication-service:9000

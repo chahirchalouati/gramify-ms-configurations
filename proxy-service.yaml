@@ -7,29 +7,27 @@ spring:
       on-profile: dev
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
       routes:
         - id: post-service
           uri: http://localhost:7005
           predicates:
-            - Path=/post/**
+            - Path=/post/
         - id: configuration-service
           uri: http://localhost:8888
           predicates:
-            - Path=/config/**
+            - Path=/config/
         - id: order-service
           uri: http://localhost:7001
           predicates:
-            - Path=/order/**
+            - Path=/order/
         - id: authentication-service
           uri: http://localhost:9000
           predicates:
-            - Path=/Oauth/**
+            - Path=/Oauth/
         - id: audit-service
           uri: http://localhost:7003
           predicates:
-            - Path=/audit/**
+            - Path=/audit/
   security:
     oauth2:
       resourceserver:
@@ -59,8 +57,6 @@ spring:
       on-profile: docker
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
       routes:
         - id: profile-service
           uri: http://notification-service:7008
@@ -111,8 +107,6 @@ spring:
       on-profile: prod
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
       routes:
         - id: profile-service
           uri: http://notification-service:7008

@@ -28,6 +28,10 @@ spring:
           uri: http://127.0.0.1:7003
           predicates:
             - Path=/audit/**
+        - id: youtube-service
+          uri: https://www.youtube.com
+          predicates:
+            - Path=/youtube/**
   security:
     oauth2:
       resourceserver:

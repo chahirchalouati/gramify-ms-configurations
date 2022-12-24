@@ -7,6 +7,17 @@ spring:
       on-profile: dev
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - PUT
+              - POST
+              - PATCH
+              - DELETE
+              - OPTIONS
       routes:
         - id: post-service
           uri: http://127.0.0.1:7005

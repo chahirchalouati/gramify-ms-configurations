@@ -8,16 +8,7 @@ spring:
   cloud:
     gateway:
       globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:4200"
-            allowedMethods:
-              - GET
-              - PUT
-              - POST
-              - PATCH
-              - DELETE
-              - OPTIONS
+        add-to-simple-url-handler-mapping: true
       routes:
         - id: post-service
           uri: http://127.0.0.1:7005

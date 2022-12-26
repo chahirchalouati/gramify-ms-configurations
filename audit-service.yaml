@@ -6,12 +6,11 @@ spring:
     activate:
       on-profile: dev
   data:
-    cassandra:
-      port: 9042
-      keyspace-name: audit_dev
-      contact-points: localhost
-      local-datacenter: datacenter1
-      schema-action: create_if_not_exists
+    mongodb:
+      database: audit_dev
+      host: localhost
+      port: 27017
+      authentication-database: admin
   security:
     oauth2:
       resourceserver:
@@ -24,12 +23,11 @@ spring:
     activate:
       on-profile: docker
   data:
-    cassandra:
-      port: 9042
-      keyspace-name: audit_dev
-      contact-points: cassandra
-      local-datacenter: datacenter1
-      schema-action: create_if_not_exist
+    mongodb:
+      database: audit_docker
+      host: mongo
+      port: 27017
+      authentication-database: admin
   security:
     oauth2:
       resourceserver:
@@ -42,12 +40,11 @@ spring:
     activate:
       on-profile: prod
   data:
-    cassandra:
-      port: 9042
-      keyspace-name: audit_dev
-      contact-points: cassandra
-      local-datacenter: datacenter1
-      schema-action: create_if_not_exist
+    mongodb:
+      database: audit_prod
+      host: mongo
+      port: 27017
+      authentication-database: admin
   security:
     oauth2:
       resourceserver:

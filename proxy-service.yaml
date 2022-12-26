@@ -7,8 +7,20 @@ spring:
       on-profile: dev
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - StripPrefix=1
       globalcors:
-        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowed-origin-patterns:
+              - "*"
       routes:
         - id: post-service
           uri: http://127.0.0.1:7005
@@ -27,7 +39,7 @@ spring:
           predicates:
             - Path=/Oauth/**
         - id: audit-service
-          uri: http://127.0.0.1:7003
+          uri: http://127.0.0.1:7003/audits
           predicates:
             - Path=/audit/**
         - id: youtube-service
@@ -63,6 +75,20 @@ spring:
       on-profile: docker
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - StripPrefix=1
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowed-origin-patterns:
+              - "*"
       routes:
         - id: profile-service
           uri: http://notification-service:7008
@@ -113,6 +139,20 @@ spring:
       on-profile: prod
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - StripPrefix=1
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowed-origin-patterns:
+              - "*"
       routes:
         - id: profile-service
           uri: http://notification-service:7008

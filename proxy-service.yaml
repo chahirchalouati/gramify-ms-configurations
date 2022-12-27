@@ -37,15 +37,11 @@ spring:
         - id: authentication-service
           uri: http://127.0.0.1:9000
           predicates:
-            - Path=/Oauth/**
+            - Path=/idp/**
         - id: audit-service
           uri: http://127.0.0.1:7003/audits
           predicates:
             - Path=/audit/**
-        - id: youtube-service
-          uri: https://www.youtube.com
-          predicates:
-            - Path=/youtube/**
   security:
     oauth2:
       resourceserver:
@@ -109,7 +105,7 @@ spring:
         - id: authentication-service
           uri: http://authentication-service:9000
           predicates:
-            - Path=/Oauth/
+            - Path=/idp/
   security:
     oauth2:
       resourceserver:

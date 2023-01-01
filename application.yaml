@@ -20,3 +20,21 @@ client:
   idp:
     url: http://localhost:9999/idp
     name: idp
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+client:
+  idp:
+    url: http://localhost:9999/idp
+    name: idp
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+client:
+  idp:
+    url: http://localhost:9999/idp
+    name: idp

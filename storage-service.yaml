@@ -1,0 +1,146 @@
+server:
+  port: 7010
+---
+spring:
+  config:
+    activate:
+      on-storage: dev
+  data:
+    mongodb:
+      database: storage_dev
+      host: localhost
+      port: 27017
+      authentication-database: admin
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+          jwk-set-uri: http://auth-server:9000/oauth2/jwks
+      client:
+        registration:
+          storage-client-oidc:
+            provider: spring
+            client-id: storage-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: openid
+            client-name: storage-client-oidc
+          storage-client:
+            provider: spring
+            client-id: storage-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: storage.read,storage.write
+            client-name: storage-client
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+      location: ${java.io.tmpdir}
+      enabled: true
+minio:
+  access-key: myaccesskey
+  url: http://localhost:47017
+  secret-key: mysecretkey
+  defaultBucketName: storage
+  defaultFolder: default
+---
+spring:
+  config:
+    activate:
+      on-storage: docker
+  data:
+    mongodb:
+      database: storage_test
+      host: mongo
+      port: 27017
+      authentication-database: admin
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://authentication-service:9000
+          jwk-set-uri: http://authentication-service:9000/oauth2/jwks
+      client:
+        registration:
+          storage-client-oidc:
+            provider: spring
+            client-id: storage-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: openid
+            client-name: storage-client-oidc
+          storage-client:
+            provider: spring
+            client-id: storage-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: storage.read,storage.write
+            client-name: storage-client
+        provider:
+          spring:
+            issuer-uri: http://authentication-service:9000
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+      location: ${java.io.tmpdir}
+      enabled: true
+minio:
+  access-key: myaccesskey
+  url: http://minio:47017
+  secret-key: mysecretkey
+  defaultBucketName: storage
+  defaultFolder: default
+---
+spring:
+  config:
+    activate:
+      on-storage: prod
+  data:
+    mongodb:
+      database: storage_test
+      host: mongo
+      port: 27017
+      authentication-database: admin
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://authentication-service:9000
+          jwk-set-uri: http://authentication-service:9000/oauth2/jwks
+      client:
+        registration:
+          storage-client-oidc:
+            provider: spring
+            client-id: storage-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: openid
+            client-name: storage-client-oidc
+          storage-client:
+            provider: spring
+            client-id: storage-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: storage.read,storage.write
+            client-name: storage-client
+        provider:
+          spring:
+            issuer-uri: http://authentication-service:9000
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+      location: ${java.io.tmpdir}
+      enabled: true
+minio:
+  access-key: myaccesskey
+  url: http://minio:47017
+  secret-key: mysecretkey
+  defaultBucketName: storage
+  defaultFolder: default

@@ -46,6 +46,10 @@ spring:
           uri: http://127.0.0.1:7009
           predicates:
             - Path=/profile/**
+        - id: profile-service
+          uri: http://127.0.0.1:7010
+          predicates:
+            - Path=/storage/**
   security:
     oauth2:
       resourceserver:
@@ -90,7 +94,7 @@ spring:
             allowed-origin-patterns:
               - "*"
       routes:
-        - id: profile-service
+        - id: notification-service
           uri: http://notification-service:7008
           predicates:
             - Path=/profile/
@@ -110,6 +114,18 @@ spring:
           uri: http://authentication-service:9000
           predicates:
             - Path=/idp/
+        - id: audit-service
+          uri: http://audit-service:7003
+          predicates:
+            - Path=/audit/**
+        - id: profile-service
+          uri: http://profile-service:7009
+          predicates:
+            - Path=/profile/**
+        - id: storage-service
+          uri: http://storage-service:7010
+          predicates:
+            - Path=/storage/**
   security:
     oauth2:
       resourceserver:
@@ -154,26 +170,38 @@ spring:
             allowed-origin-patterns:
               - "*"
       routes:
-        - id: profile-service
+        - id: notification-service
           uri: http://notification-service:7008
           predicates:
-            - Path=/profile/**
+            - Path=/notification/
         - id: post-service
           uri: http://post-service:7005
           predicates:
-            - Path=/post/**
+            - Path=/post/
         - id: configuration-service
           uri: http://configuration-service:8888
           predicates:
-            - Path=/config/**
+            - Path=/config/
         - id: order-service
           uri: http://order-service:7001
           predicates:
-            - Path=/order/**
+            - Path=/order/
         - id: authentication-service
           uri: http://authentication-service:9000
           predicates:
-            - Path=/idp/**
+            - Path=/idp/
+        - id: audit-service
+          uri: http://audit-service:7003
+          predicates:
+            - Path=/audit/**
+        - id: profile-service
+          uri: http://profile-service:7009
+          predicates:
+            - Path=/profile/**
+        - id: storage-service
+          uri: http://storage-service:7010
+          predicates:
+            - Path=/storage/**
   security:
     oauth2:
       client:

@@ -46,7 +46,7 @@ spring:
   data:
     mongodb:
       database: authentication_test
-      host: localhost
+      host: mongo
       port: 27017
       authentication-database: admin
   security:
@@ -59,7 +59,7 @@ mongock:
   change-logs-scan-package: com.crcl.authenticationservice.migration
 security:
   clientIp: 127.0.0.1
-  issuer: http://auth-server:9000
+  issuer: http://authentication-service:9000
   clientsProps:
     post-client:
       refresh-token-access-time-to-leave: 8000
@@ -84,7 +84,7 @@ spring:
   data:
     mongodb:
       database: authentication_test
-      host: localhost
+      host: mongo
       port: 27017
       authentication-database: admin
   security:
@@ -97,7 +97,7 @@ mongock:
   change-logs-scan-package: com.crcl.authenticationservice.migration
 security:
   clientIp: 127.0.0.1
-  issuer: http://auth-server:9000
+  issuer: http://authentication-service:9000
   clientsProps:
     post-client:
       refresh-token-access-time-to-leave: 8000

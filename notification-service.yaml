@@ -31,7 +31,7 @@ spring:
             client-id: notification-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: profile.read,profile.write
+            scope: notification.read,notification.write
             client-name: notification-client-authorization-code
         provider:
           spring:
@@ -77,7 +77,7 @@ spring:
             client-id: notification-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: profile.read,profile.write
+            scope: notification.read,notification.write
             client-name: notification-client-authorization-code
         provider:
           spring:
@@ -123,7 +123,7 @@ spring:
             client-id: notification-client
             client-secret: secret
             authorization-grant-type: client_credentials
-            scope: profile.read,profile.write
+            scope: notification.read,notification.write
             client-name: notification-client-authorization-code
         provider:
           spring:

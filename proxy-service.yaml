@@ -147,7 +147,7 @@ spring:
             authorization-grant-type: client_credentials
         provider:
           spring:
-            issuer-uri: http://auth-server:9000
+            issuer-uri: http://authentication-service:9000
 ---
 spring:
   config:
@@ -219,4 +219,4 @@ spring:
             authorization-grant-type: client_credentials
         provider:
           spring:
-            issuer-uri: http://auth-server:9000
+            issuer-uri: http://authentication-service:9000

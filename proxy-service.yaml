@@ -58,15 +58,15 @@ spring:
           jwk-set-uri: http://auth-server:9000/oauth2/jwks
       client:
         registration:
-          proxy-client-oidc:
+          proxy-service-oidc:
             provider: spring
-            client-id: proxy-client
+            client-id: proxy-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          proxy-client-authorization-code:
+          proxy-service-authorization-code:
             provider: spring
-            client-id: proxy-client
+            client-id: proxy-service
             client-secret: secret
             authorization-grant-type: client_credentials
         provider:
@@ -134,15 +134,15 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          proxy-client-oidc:
+          proxy-service-oidc:
             provider: spring
-            client-id: proxy-client
+            client-id: proxy-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          proxy-client-authorization-code:
+          proxy-service-authorization-code:
             provider: spring
-            client-id: proxy-client
+            client-id: proxy-service
             client-secret: secret
             authorization-grant-type: client_credentials
         provider:
@@ -206,15 +206,15 @@ spring:
     oauth2:
       client:
         registration:
-          proxy-client-oidc:
+          proxy-service-oidc:
             provider: spring
-            client-id: proxy-client
+            client-id: proxy-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          proxy-client-authorization-code:
+          proxy-service-authorization-code:
             provider: spring
-            client-id: proxy-client
+            client-id: proxy-service
             client-secret: secret
             authorization-grant-type: client_credentials
         provider:

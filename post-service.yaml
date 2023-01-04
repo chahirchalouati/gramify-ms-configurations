@@ -37,20 +37,20 @@ spring:
           jwk-set-uri: http://auth-server:9000/oauth2/jwks
       client:
         registration:
-          post-client-oidc:
+          post-service-oidc:
             provider: spring
-            client-id: post-client
+            client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: post-client-oidc
-          post-client-authorization-code:
+            client-name: post-service-oidc
+          post-service-authorization-code:
             provider: spring
-            client-id: post-client
+            client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: post.read
-            client-name: post-client-authorization-code
+            client-name: post-service-authorization-code
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -91,20 +91,20 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          post-client-oidc:
+          post-service-oidc:
             provider: spring
-            client-id: post-client
+            client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: post-client-oidc
-          post-client-authorization-code:
+            client-name: post-service-oidc
+          post-service-authorization-code:
             provider: spring
-            client-id: post-client
+            client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: post.read
-            client-name: post-client-authorization-code
+            client-name: post-service-authorization-code
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
@@ -145,20 +145,20 @@ spring:
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
       client:
         registration:
-          post-client-oidc:
+          post-service-oidc:
             provider: spring
-            client-id: post-client
+            client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-            client-name: post-client-oidc
-          post-client-authorization-code:
+            client-name: post-service-oidc
+          post-service-authorization-code:
             provider: spring
-            client-id: post-client
+            client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: post.read
-            client-name: post-client-authorization-code
+            client-name: post-service-authorization-code
         provider:
           spring:
             issuer-uri: http://authentication-service:9000

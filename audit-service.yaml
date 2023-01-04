@@ -17,6 +17,22 @@ spring:
         jwt:
           issuer-uri: http://auth-server:9000
           jwk-set-uri: http://auth-server:9000/oauth2/jwks
+      client:
+        registration:
+          audit-service-oidc:
+            provider: spring
+            client-id: comment-service
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: openid
+          audit-service-authorization-code:
+            provider: spring
+            client-id: comment-service
+            client-secret: secret
+            authorization-grant-type: client_credentials
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000
 ---
 spring:
   config:
@@ -34,6 +50,22 @@ spring:
         jwt:
           issuer-uri: http://authentication-service:9000
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
+      client:
+        registration:
+          audit-service-oidc:
+            provider: spring
+            client-id: comment-service
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: openid
+          audit-service-authorization-code:
+            provider: spring
+            client-id: comment-service
+            client-secret: secret
+            authorization-grant-type: client_credentials
+        provider:
+          spring:
+            issuer-uri: http://authentication-service:9000
 ---
 spring:
   config:
@@ -51,3 +83,19 @@ spring:
         jwt:
           issuer-uri: http://authentication-service:9000
           jwk-set-uri: http://authentication-service:9000/oauth2/jwks
+      client:
+        registration:
+          audit-service-oidc:
+            provider: spring
+            client-id: comment-service
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: openid
+          audit-service-authorization-code:
+            provider: spring
+            client-id: comment-service
+            client-secret: secret
+            authorization-grant-type: client_credentials
+        provider:
+          spring:
+            issuer-uri: http://authentication-service:9000

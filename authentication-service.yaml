@@ -24,7 +24,7 @@ security:
   issuer: http://auth-server:9000
   loginPage: /idp/login
   failureForwardUrl: /idp/login?error=true
-  registration:
+  registrations:
     notification-service:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
@@ -130,7 +130,7 @@ security:
   issuer: http://auth-server:9000
   loginPage: /idp/login
   failureForwardUrl: /idp/login?error=true
-  registration:
+  registrations:
     notification-service:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000

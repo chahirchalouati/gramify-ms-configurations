@@ -32,8 +32,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://auth-server:9000
-          jwk-set-uri: http://auth-server:9000/oauth2/jwks
+          issuer-uri: http://authentication-service:9000
+          jwk-set-uri: http://authentication-service:9000/oauth2/jwks
 ---
 spring:
   config:
@@ -49,5 +49,5 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://auth-server:9000
-          jwk-set-uri: http://auth-server:9000/oauth2/jwks
+          issuer-uri: http://authentication-service:9000
+          jwk-set-uri: http://authentication-service:9000/oauth2/jwks

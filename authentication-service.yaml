@@ -26,18 +26,27 @@ security:
   failureForwardUrl: /idp/login?error=true
   clientsProps:
     post-client:
+      name: post-service
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     proxy-client:
+      name: proxy-service
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     order-client:
+      name: order-service
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     ui-client:
+      name: ui-client
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
     notification_client:
+      name: notification-service
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+    storage_client:
+      name: storage-service
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
 ---

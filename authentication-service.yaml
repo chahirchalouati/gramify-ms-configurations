@@ -225,7 +225,7 @@ security:
       token-access-time-to-leave: 8000
       id: ui-service
       uris:
-        - http://storage-service:4200
+        - http://ui-service:4200
       scopes:
         - openid
       grantTypes:

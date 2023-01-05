@@ -136,7 +136,7 @@ mongock:
   change-logs-scan-package: com.crcl.authentication.migration
 security:
   clientIp: 127.0.0.1
-  issuer: http://authentication-service:9000
+  issuer: http://auth-server:9000
   loginPage: /idp/login
   failureForwardUrl: /idp/login?error=true
   registrations:

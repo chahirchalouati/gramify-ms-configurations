@@ -23,6 +23,9 @@ client:
   storage:
     url: http://localhost:9999/storage
     name: storage
+  profile:
+    url: http://localhost:9999/profile
+    name: profile
 ---
 spring:
   config:
@@ -35,6 +38,9 @@ client:
   storage:
     url: http://proxy-service:9999/storage
     name: storage
+  profile:
+    url: http://proxy-service:9999/profile
+    name: profile
 ---
 spring:
   config:
@@ -47,3 +53,6 @@ client:
   storage:
     url: http://proxy-service:9999/storage
     name: storage
+  profile:
+    url: http://proxy-service:9999/profile
+    name: profile

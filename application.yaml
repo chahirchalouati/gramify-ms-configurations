@@ -23,7 +23,13 @@ client:
   storage:
     url: http://localhost:9999/storage
     name: storage
+  srvStorage:
+    url: http://localhost:9999/storage
+    name: storage
   profile:
+    url: http://localhost:9999/profile
+    name: profile
+  srvProfile:
     url: http://localhost:9999/profile
     name: profile
 ---
@@ -38,7 +44,13 @@ client:
   storage:
     url: http://proxy-service:9999/storage
     name: storage
+  srvStorage:
+    url: http://proxy-service:9999/storage
+    name: storage
   profile:
+    url: http://proxy-service:9999/profile
+    name: profile
+  srvProfile:
     url: http://proxy-service:9999/profile
     name: profile
 ---
@@ -53,6 +65,12 @@ client:
   storage:
     url: http://proxy-service:9999/storage
     name: storage
+  srvStorage:
+    url: http://proxy-service:9999/storage
+    name: storage
   profile:
+    url: http://proxy-service:9999/profile
+    name: profile
+  srvProfile:
     url: http://proxy-service:9999/profile
     name: profile

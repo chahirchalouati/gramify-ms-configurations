@@ -46,8 +46,11 @@ minio:
   access-key: myaccesskey
   url: http://localhost:47017
   secret-key: mysecretkey
-  defaultBucketName: storage
-  defaultFolder: default
+  buckets:
+    - name: storage
+      objectLock: false
+    - name: video
+      objectLock: false
 ---
 spring:
   config:
@@ -94,8 +97,11 @@ minio:
   access-key: myaccesskey
   url: http://minio:47017
   secret-key: mysecretkey
-  defaultBucketName: storage
-  defaultFolder: default
+  buckets:
+    - name: storage
+      objectLock: false
+    - name: video
+      objectLock: false
 ---
 spring:
   config:
@@ -142,5 +148,8 @@ minio:
   access-key: myaccesskey
   url: http://minio:47017
   secret-key: mysecretkey
-  defaultBucketName: storage
-  defaultFolder: default
+  buckets:
+    - name: storage
+      objectLock: false
+    - name: video
+      objectLock: false

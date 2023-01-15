@@ -49,8 +49,10 @@ minio:
   buckets:
     - name: storage
       objectLock: false
+      isDefault: true
     - name: video
       objectLock: false
+      isDefault: false
 ---
 spring:
   config:
@@ -100,8 +102,10 @@ minio:
   buckets:
     - name: storage
       objectLock: false
+      isDefault: true
     - name: video
       objectLock: false
+      isDefault: false
 ---
 spring:
   config:
@@ -151,5 +155,7 @@ minio:
   buckets:
     - name: storage
       objectLock: false
+      isDefault: true
     - name: video
       objectLock: false
+      isDefault: false

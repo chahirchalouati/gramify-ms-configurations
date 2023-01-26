@@ -116,6 +116,9 @@ security:
       grantTypes:
         - authorization_code
         - client_credentials
+dummy-users:
+  username: username
+  count: 100
 ---
 spring:
   config:

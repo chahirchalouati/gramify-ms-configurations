@@ -116,7 +116,7 @@ security:
       grantTypes:
         - authorization_code
         - client_credentials
-dummy-users:
+dummy:
   username: username
   password: password
   count: 100

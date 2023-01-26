@@ -118,6 +118,7 @@ security:
         - client_credentials
 dummy-users:
   username: username
+  password: password
   count: 100
 ---
 spring:

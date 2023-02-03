@@ -30,10 +30,10 @@ spring:
           uri: http://127.0.0.1:8888
           predicates:
             - Path=/config/**
-        - id: order-service
+        - id: comment-service
           uri: http://127.0.0.1:7001
           predicates:
-            - Path=/order/**
+            - Path=/comment/**
         - id: authentication-service
           uri: http://127.0.0.1:9000
           predicates:
@@ -106,10 +106,10 @@ spring:
           uri: http://configuration-service:8888
           predicates:
             - Path=/config/
-        - id: order-service
-          uri: http://order-service:7001
+        - id: comment-service
+          uri: http://comment-service:7001
           predicates:
-            - Path=/order/
+            - Path=/comment/
         - id: authentication-service
           uri: http://authentication-service:9000
           predicates:
@@ -182,10 +182,10 @@ spring:
           uri: http://configuration-service:8888
           predicates:
             - Path=/config/
-        - id: order-service
-          uri: http://order-service:7001
+        - id: comment-service
+          uri: http://comment-service:7001
           predicates:
-            - Path=/order/
+            - Path=/comment/
         - id: authentication-service
           uri: http://authentication-service:9000
           predicates:

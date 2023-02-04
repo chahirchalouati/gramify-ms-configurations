@@ -6,7 +6,7 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/test_order?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/test_comment?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -57,7 +57,7 @@ spring:
     activate:
       on-profile: docker
   datasource:
-    url: jdbc:mysql://mysql-db:3306/docker_order?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql-db:3306/docker_comment?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -108,7 +108,7 @@ spring:
     activate:
       on-profile: prod
   datasource:
-    url: jdbc:mysql://mysql-db:3306/prod_order?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql-db:3306/prod_comment?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,5 +1,8 @@
 server:
   port: 7010
+api:
+  title: Storage Service
+  description: API for Storage services
 ---
 spring:
   config:

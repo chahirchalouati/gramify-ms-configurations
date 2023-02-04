@@ -1,5 +1,8 @@
 server:
   port: 7005
+api:
+  title: Post Service
+  description: API for Post services
 ---
 spring:
   config:

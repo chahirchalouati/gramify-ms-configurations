@@ -1,5 +1,8 @@
 server:
   port: 7001
+api:
+  title: Comment Service
+  description: API for Comment services
 ---
 spring:
   config:

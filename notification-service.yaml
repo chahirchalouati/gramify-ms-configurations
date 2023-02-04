@@ -1,5 +1,8 @@
 server:
   port: 7008
+api:
+  title: Notification Service
+  description: API for Notification services
 ---
 spring:
   config:

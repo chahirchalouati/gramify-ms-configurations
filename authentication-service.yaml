@@ -1,5 +1,8 @@
 server:
   port: 9000
+api:
+  title: title
+
 ---
 spring:
   config:

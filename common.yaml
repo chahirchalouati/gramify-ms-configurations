@@ -1,0 +1,18 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+springdoc:
+  api-docs:
+    path: /api-docs
+
+api:
+  authorizationUrl: ${client.idp.url}
+  tokenUrl: ${client.idp.url}/oauth2/token
+  version: 1.0.0
+  termsOfService: https://www.crcl.com/terms
+  contactName: Chahir Chalouati
+  contactEmail: chahir_chalouati@example.com
+  licenseName: MIT
+  licenseUrl: https://opensource.org/licenses/MIT

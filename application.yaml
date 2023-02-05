@@ -15,6 +15,7 @@ api:
   contactEmail: chahir_chalouati@example.com
   licenseName: MIT
   licenseUrl: https://opensource.org/licenses/MIT
+
 ---
 spring:
   config:

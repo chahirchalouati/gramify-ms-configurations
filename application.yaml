@@ -7,7 +7,7 @@ springdoc:
   api-docs:
     path: /api-docs
 
-common_metadata: &common-metadata
+common-metadata: &common-metadata
   api:
     authorizationUrl: ${client.idp.url}
     tokenUrl: ${client.idp.url}/oauth2/token

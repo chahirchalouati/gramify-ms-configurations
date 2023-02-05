@@ -39,6 +39,7 @@ client:
 api:
   authorizationUrl: ${client.idp.url}
   tokenUrl: ${client.idp.url}/oauth2/token
+
 ---
 spring:
   config:
@@ -63,6 +64,7 @@ client:
 api:
   authorizationUrl: ${client.idp.url}
   tokenUrl: ${client.idp.url}/oauth2/token
+
 ---
 spring:
   config:

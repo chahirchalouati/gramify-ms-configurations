@@ -1,8 +1,22 @@
 server:
   port: 7010
-api:
-  title: Storage Service
-  description: API for Storage services
+
+springfox:
+  documentation:
+    swagger-ui:
+      path: /swagger-ui/swagger-ui.html
+    base-path: /api-docs
+    api-info:
+      title: Example API
+      version: 1.0
+      description: Example API Description
+    host: example.com
+    schemes:
+      - http
+      - https
+    paths-to-exclude:
+      - /error.*
+    enable: true
 ---
 spring:
   config:

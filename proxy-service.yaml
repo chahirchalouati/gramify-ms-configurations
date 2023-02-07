@@ -37,7 +37,7 @@ spring:
         - id: authentication-service
           uri: http://127.0.0.1:9000
           predicates:
-            - Path=/idp/**
+            - Path=/authentication/**
         - id: audit-service
           uri: http://127.0.0.1:7003
           predicates:
@@ -113,7 +113,7 @@ spring:
         - id: authentication-service
           uri: http://authentication-service:9000
           predicates:
-            - Path=/idp/
+            - Path=/authentication/
         - id: audit-service
           uri: http://audit-service:7003
           predicates:
@@ -189,7 +189,7 @@ spring:
         - id: authentication-service
           uri: http://authentication-service:9000
           predicates:
-            - Path=/idp/
+            - Path=/authentication/
         - id: audit-service
           uri: http://audit-service:7003
           predicates:

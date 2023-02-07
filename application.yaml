@@ -22,9 +22,9 @@ spring:
     activate:
       on-profile: dev
 client:
-  idp:
-    url: http://localhost:9999/idp
-    name: idp
+  authentication:
+    url: http://localhost:9999/authentication
+    name: authentication
   storage:
     url: http://localhost:9999/storage
     name: storage
@@ -38,8 +38,8 @@ client:
     url: http://localhost:9999/profile
     name: profile
 api:
-  authorizationUrl: ${client.idp.url}
-  tokenUrl: ${client.idp.url}/oauth2/token
+  authorizationUrl: ${client.authentication.url}
+  tokenUrl: ${client.authentication.url}/oauth2/token
 
 ---
 spring:
@@ -47,9 +47,9 @@ spring:
     activate:
       on-profile: docker
 client:
-  idp:
-    url: http://proxy-service:9999/idp
-    name: idp
+  authentication:
+    url: http://proxy-service:9999/authentication
+    name: authentication
   storage:
     url: http://proxy-service:9999/storage
     name: storage
@@ -63,8 +63,8 @@ client:
     url: http://proxy-service:9999/profile
     name: profile
 api:
-  authorizationUrl: ${client.idp.url}
-  tokenUrl: ${client.idp.url}/oauth2/token
+  authorizationUrl: ${client.authentication.url}
+  tokenUrl: ${client.authentication.url}/oauth2/token
 
 ---
 spring:
@@ -72,9 +72,9 @@ spring:
     activate:
       on-profile: prod
 client:
-  idp:
-    url: http://proxy-service:9999/idp
-    name: idp
+  authentication:
+    url: http://proxy-service:9999/authentication
+    name: authentication
   storage:
     url: http://proxy-service:9999/storage
     name: storage
@@ -88,5 +88,5 @@ client:
     url: http://proxy-service:9999/profile
     name: profile
 api:
-  authorizationUrl: ${client.idp.url}
-  tokenUrl: ${client.idp.url}/oauth2/token
+  authorizationUrl: ${client.authentication.url}
+  tokenUrl: ${client.authentication.url}/oauth2/token

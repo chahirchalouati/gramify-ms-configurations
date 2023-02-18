@@ -10,7 +10,7 @@ spring:
       on-profile: dev
   data:
     mongodb:
-      database: profile_docker
+      database: profile_dev
       host: localhost
       port: 27017
       authentication-database: admin

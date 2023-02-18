@@ -25,16 +25,16 @@ client:
     url: http://localhost:9999/idp
     name: idp
   storage:
-    url: http://localhost:9999/storage
+    url: http://localhost:7010/storage
     name: storage
   srvStorage:
-    url: http://localhost:9999/storage
+    url: http://localhost:7010/storage
     name: storage
   profile:
-    url: http://localhost:9999/profile
+    url: http://localhost:7009/profile
     name: profile
   srvProfile:
-    url: http://localhost:9999/profile
+    url: http://localhost:7009/profile
     name: profile
 api:
   authorizationUrl: ${client.idp.url}
@@ -50,16 +50,16 @@ client:
     url: http://proxy-service:9999/idp
     name: idp
   storage:
-    url: http://proxy-service:9999/storage
+    url: http://proxy-service:7010/storage
     name: storage
   srvStorage:
-    url: http://proxy-service:9999/storage
+    url: http://proxy-service:7010/storage
     name: storage
   profile:
-    url: http://proxy-service:9999/profile
+    url: http://proxy-service:7009/profile
     name: profile
   srvProfile:
-    url: http://proxy-service:9999/profile
+    url: http://proxy-service:7009/profile
     name: profile
 api:
   authorizationUrl: ${client.idp.url}
@@ -75,16 +75,16 @@ client:
     url: http://proxy-service:9999/idp
     name: idp
   storage:
-    url: http://proxy-service:9999/storage
+    url: http://proxy-service:7010/storage
     name: storage
   srvStorage:
-    url: http://proxy-service:9999/storage
+    url: http://proxy-service:7010/storage
     name: storage
   profile:
-    url: http://proxy-service:9999/profile
+    url: http://proxy-service:7009/profile
     name: profile
   srvProfile:
-    url: http://proxy-service:9999/profile
+    url: http://proxy-service:7009/profile
     name: profile
 api:
   authorizationUrl: ${client.idp.url}

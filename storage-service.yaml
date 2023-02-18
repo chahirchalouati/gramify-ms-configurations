@@ -5,6 +5,23 @@ api:
   title: Storage Service
   description: API for Storage services
 
+image-sizes:
+  logo:
+    width: 250
+    height: 50
+  header:
+    width: 1200
+    height: 400
+  feature:
+    width: 800
+    height: 600
+  thumbnail:
+    width: 300
+    height: 300
+  avatar:
+    width: 100
+    height: 100
+
 springdoc:
   api-docs:
     path: /api-docs

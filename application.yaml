@@ -27,19 +27,19 @@ client:
     name: authentication
   srvAuthentication:
     url: http://localhost:9999/authentication
-    name: authentication
+    name: srvAuthentication
   storage:
     url: http://localhost:9999/storage
     name: storage
   srvStorage:
     url: http://localhost:9999/storage
-    name: storage
+    name: srvStorage
   profile:
     url: http://localhost:9999/profile
     name: profile
   srvProfile:
     url: http://localhost:9999/profile
-    name: profile
+    name: srvProfile
 api:
   authorizationUrl: ${client.authentication.url}
   tokenUrl: ${client.authentication.url}/oauth2/token
@@ -55,19 +55,19 @@ client:
     name: authentication
   srvAuthentication:
     url: http://proxy-service:9999/authentication
-    name: authentication
+    name: srvAuthentication
   storage:
     url: http://proxy-service:9999/storage
     name: storage
   srvStorage:
     url: http://proxy-service:9999/storage
-    name: storage
+    name: srvStorage
   profile:
     url: http://proxy-service:9999/profile
     name: profile
   srvProfile:
     url: http://proxy-service:9999/profile
-    name: profile
+    name: srvProfile
 api:
   authorizationUrl: ${client.authentication.url}
   tokenUrl: ${client.authentication.url}/oauth2/token
@@ -83,19 +83,19 @@ client:
     name: authentication
   srvAuthentication:
     url: http://proxy-service:9999/authentication
-    name: authentication
+    name: srvAuthentication
   storage:
     url: http://proxy-service:9999/storage
     name: storage
   srvStorage:
     url: http://proxy-service:9999/storage
-    name: storage
+    name: srvStorage
   profile:
     url: http://proxy-service:9999/profile
     name: profile
   srvProfile:
     url: http://proxy-service:9999/profile
-    name: profile
+    name: srvProfile
 api:
   authorizationUrl: ${client.authentication.url}
   tokenUrl: ${client.authentication.url}/oauth2/token

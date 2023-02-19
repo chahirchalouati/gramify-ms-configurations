@@ -25,6 +25,9 @@ client:
   authentication:
     url: http://localhost:9999/authentication
     name: authentication
+  srvAuthentication:
+    url: http://localhost:9999/authentication
+    name: authentication
   storage:
     url: http://localhost:9999/storage
     name: storage
@@ -50,6 +53,9 @@ client:
   authentication:
     url: http://proxy-service:9999/authentication
     name: authentication
+  srvAuthentication:
+    url: http://proxy-service:9999/authentication
+    name: authentication
   storage:
     url: http://proxy-service:9999/storage
     name: storage
@@ -73,6 +79,9 @@ spring:
       on-profile: prod
 client:
   authentication:
+    url: http://proxy-service:9999/authentication
+    name: authentication
+  srvAuthentication:
     url: http://proxy-service:9999/authentication
     name: authentication
   storage:

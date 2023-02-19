@@ -29,7 +29,7 @@ spring:
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          audit-service-authorization-code:
+          audit-service:
             provider: spring
             client-id: comment-service
             client-secret: secret
@@ -62,7 +62,7 @@ spring:
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          audit-service-authorization-code:
+          audit-service:
             provider: spring
             client-id: comment-service
             client-secret: secret
@@ -95,7 +95,7 @@ spring:
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          audit-service-authorization-code:
+          audit-service:
             provider: spring
             client-id: comment-service
             client-secret: secret

@@ -29,13 +29,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: profile-service-oidc
-          profile-service-authorization-code:
+          profile-service:
             provider: spring
             client-id: profile-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: profile.read,profile.write
-            client-name: profile-service-authorization-code
+            client-name: profile-service
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -66,13 +66,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: profile-service-oidc
-          profile-service-authorization-code:
+          profile-service:
             provider: spring
             client-id: profile-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: profile.read,profile.write
-            client-name: profile-service-authorization-code
+            client-name: profile-service
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
@@ -102,13 +102,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: profile-service-oidc
-          profile-service-authorization-code:
+          profile-service:
             provider: spring
             client-id: profile-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: profile.read,profile.write
-            client-name: profile-service-authorization-code
+            client-name: profile-service
         provider:
           spring:
             issuer-uri: http://authentication-service:9000

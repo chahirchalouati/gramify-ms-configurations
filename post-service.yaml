@@ -47,13 +47,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: post-service-oidc
-          post-service-authorization-code:
+          post-service:
             provider: spring
             client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: post.read
-            client-name: post-service-authorization-code
+            client-name: post-service
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -101,13 +101,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: post-service-oidc
-          post-service-authorization-code:
+          post-service:
             provider: spring
             client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: post.read
-            client-name: post-service-authorization-code
+            client-name: post-service
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
@@ -155,13 +155,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: post-service-oidc
-          post-service-authorization-code:
+          post-service:
             provider: spring
             client-id: post-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: post.read
-            client-name: post-service-authorization-code
+            client-name: post-service
         provider:
           spring:
             issuer-uri: http://authentication-service:9000

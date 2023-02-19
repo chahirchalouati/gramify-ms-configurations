@@ -43,13 +43,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: notification-service-oidc
-          notification-service-authorization-code:
+          notification-service:
             provider: spring
             client-id: notification-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: notification.read,notification.write
-            client-name: notification-service-authorization-code
+            client-name: notification-service
         provider:
           spring:
             issuer-uri: http://auth-server:9000
@@ -89,13 +89,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: notification-service-oidc
-          notification-service-authorization-code:
+          notification-service:
             provider: spring
             client-id: notification-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: notification.read,notification.write
-            client-name: notification-service-authorization-code
+            client-name: notification-service
         provider:
           spring:
             issuer-uri: http://authentication-service:9000
@@ -135,13 +135,13 @@ spring:
             authorization-grant-type: client_credentials
             scope: openid
             client-name: notification-service-oidc
-          notification-service-authorization-code:
+          notification-service:
             provider: spring
             client-id: notification-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: notification.read,notification.write
-            client-name: notification-service-authorization-code
+            client-name: notification-service
         provider:
           spring:
             issuer-uri: http://authentication-service:9000

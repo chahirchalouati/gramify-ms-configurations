@@ -64,7 +64,7 @@ spring:
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          proxy-service-authorization-code:
+          proxy-service:
             provider: spring
             client-id: proxy-service
             client-secret: secret
@@ -140,7 +140,7 @@ spring:
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          proxy-service-authorization-code:
+          proxy-service:
             provider: spring
             client-id: proxy-service
             client-secret: secret
@@ -212,7 +212,7 @@ spring:
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
-          proxy-service-authorization-code:
+          proxy-service:
             provider: spring
             client-id: proxy-service
             client-secret: secret

@@ -120,6 +120,17 @@ security:
       grantTypes:
         - authorization_code
         - client_credentials
+minio:
+  access-key: myaccesskey
+  url: http://localhost:47017
+  secret-key: mysecretkey
+  buckets:
+    - name: key-public-cert
+      objectLock: false
+      isDefault: true
+    - name: key-private-cert
+      objectLock: false
+      isDefault: false
 dummy:
   username: username
   password: password
@@ -240,6 +251,17 @@ security:
       grantTypes:
         - authorization_code
         - client_credentials
+minio:
+  access-key: myaccesskey
+  url: http://minio:47017
+  secret-key: mysecretkey
+  buckets:
+    - name: key-public-cert
+      objectLock: false
+      isDefault: true
+    - name: key-private-cert
+      objectLock: false
+      isDefault: false
 
 ---
 spring:
@@ -357,3 +379,14 @@ security:
       grantTypes:
         - authorization_code
         - client_credentials
+minio:
+  access-key: myaccesskey
+  url: http://minio:47017
+  secret-key: mysecretkey
+  buckets:
+    - name: key-public-cert
+      objectLock: false
+      isDefault: true
+    - name: key-private-cert
+      objectLock: false
+      isDefault: false

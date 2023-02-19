@@ -59,10 +59,10 @@ security:
         - openid
       grantTypes:
         - client_credentials
-    order-service:
+    comment-service:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-      id: order-service
+      id: comment-service
       uris:
         - http://127.0.0.1:7001
       scopes:
@@ -179,12 +179,12 @@ security:
         - openid
       grantTypes:
         - client_credentials
-    order-service:
+    comment-service:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-      id: order-service
+      id: comment-service
       uris:
-        - http://order-service:7001
+        - http://comment-service:7001
       scopes:
         - openid
       grantTypes:
@@ -296,12 +296,12 @@ security:
         - openid
       grantTypes:
         - client_credentials
-    order-service:
+    comment-service:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-      id: order-service
+      id: comment-service
       uris:
-        - http://order-service:7001
+        - http://comment-service:7001
       scopes:
         - openid
       grantTypes:

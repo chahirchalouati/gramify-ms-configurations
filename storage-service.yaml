@@ -35,7 +35,7 @@ spring:
       on-profile: dev
   data:
     mongodb:
-      database: storage_dev
+      database: dev_storage
       host: localhost
       port: 27017
       authentication-database: admin
@@ -105,7 +105,7 @@ spring:
       on-profile: docker
   data:
     mongodb:
-      database: storage_docker
+      database: docker_storage
       host: mongo
       port: 27017
       authentication-database: admin
@@ -158,7 +158,7 @@ spring:
       on-profile: prod
   data:
     mongodb:
-      database: storage_prod
+      database: prod_storage
       host: mongo
       port: 27017
       authentication-database: admin

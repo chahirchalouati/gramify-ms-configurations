@@ -11,7 +11,7 @@ spring:
       on-profile: dev
   data:
     mongodb:
-      database: authentication_dev
+      database: dev_authentication
       host: localhost
       port: 27017
       authentication-database: admin

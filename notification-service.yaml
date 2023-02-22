@@ -24,7 +24,7 @@ spring:
       on-profile: dev
   data:
     mongodb:
-      database: notification_docker
+      database: dev_notification
       host: localhost
       port: 27017
       authentication-database: admin
@@ -70,7 +70,7 @@ spring:
       on-profile: docker
   data:
     mongodb:
-      database: notification_docker
+      database: docker_notification
       host: mongo
       port: 27017
       authentication-database: admin
@@ -116,7 +116,7 @@ spring:
       on-profile: prod
   data:
     mongodb:
-      database: notification_prod
+      database: prod_notification
       host: mongo
       port: 27017
       authentication-database: admin

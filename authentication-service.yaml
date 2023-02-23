@@ -27,6 +27,7 @@ security:
   clientIp: 127.0.0.1
   issuer: http://auth-server:9000
   loginPage: /authentication/login
+  certificationBucket: cert
   failureForwardUrl: /authentication/login?error=true
   registrations:
     notification-service:
@@ -158,6 +159,7 @@ security:
   clientIp: 127.0.0.1
   issuer: http://authentication-service:9000
   loginPage: /authentication/login
+  certificationBucket: cert
   failureForwardUrl: /authentication/login?error=true
   registrations: &registrations
     notification-service:
@@ -286,6 +288,7 @@ security:
   clientIp: 127.0.0.1
   issuer: http://authentication-service:9000
   loginPage: /authentication/login
+  certificationBucket: cert
   failureForwardUrl: /authentication/login?error=true
   registrations:
     notification-service:

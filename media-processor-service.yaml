@@ -50,6 +50,8 @@ spring:
   config:
     activate:
       on-profile: dev
+  codec:
+    max-in-memory-size: 10MB
   data:
     mongodb:
       database: dev_media-processor

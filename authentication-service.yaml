@@ -121,6 +121,18 @@ security:
       grantTypes:
         - authorization_code
         - client_credentials
+    media-processor-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: media-processor-service
+      uris:
+        - http://127.0.0.1:7012
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
+
+
 minio:
   access-key: myaccesskey
   url: http://localhost:47017
@@ -253,6 +265,17 @@ security:
       grantTypes:
         - authorization_code
         - client_credentials
+    media-processor-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: media-processor-service
+      uris:
+        - http://127.0.0.1:7012
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
+
 minio:
   access-key: myaccesskey
   url: http://minio:47017
@@ -382,6 +405,17 @@ security:
       grantTypes:
         - authorization_code
         - client_credentials
+    media-processor-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: media-processor-service
+      uris:
+        - http://127.0.0.1:7012
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
+
 minio:
   access-key: myaccesskey
   url: http://minio:47017

@@ -2,8 +2,8 @@ server:
   port: 7012
 
 api:
-  title: Storage Service
-  description: API for Storage services
+  title: Media Processor Service
+  description: API for Media Processor services
 
 image-sizes:
   sizes:

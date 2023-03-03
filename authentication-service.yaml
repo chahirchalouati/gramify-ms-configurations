@@ -131,6 +131,16 @@ security:
         - openid
       grantTypes:
         - client_credentials
+    story-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: story-service
+      uris:
+        - http://127.0.0.1:7002
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
 
 
 minio:
@@ -275,7 +285,16 @@ security:
         - openid
       grantTypes:
         - client_credentials
-
+    story-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: story-service
+      uris:
+        - http://127.0.0.1:7002
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
 minio:
   access-key: myaccesskey
   url: http://minio:47017
@@ -415,7 +434,16 @@ security:
         - openid
       grantTypes:
         - client_credentials
-
+    story-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: story-service
+      uris:
+        - http://127.0.0.1:7002
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
 minio:
   access-key: myaccesskey
   url: http://minio:47017

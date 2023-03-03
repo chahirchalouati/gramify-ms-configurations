@@ -34,6 +34,10 @@ spring:
           uri: http://127.0.0.1:7001
           predicates:
             - Path=/comment/**
+        - id: story-service
+          uri: http://127.0.0.1:7002
+          predicates:
+            - Path=/story/
         - id: authentication-service
           uri: http://127.0.0.1:9000
           predicates:
@@ -110,6 +114,10 @@ spring:
           uri: http://comment-service:7001
           predicates:
             - Path=/comment/
+        - id: story-service
+          uri: http://story-service:7002
+          predicates:
+            - Path=/story/
         - id: authentication-service
           uri: http://authentication-service:9000
           predicates:
@@ -186,6 +194,10 @@ spring:
           uri: http://comment-service:7001
           predicates:
             - Path=/comment/
+        - id: story-service
+          uri: http://story-service:7002
+          predicates:
+            - Path=/story/
         - id: authentication-service
           uri: http://authentication-service:9000
           predicates:

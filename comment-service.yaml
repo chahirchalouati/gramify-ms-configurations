@@ -42,13 +42,13 @@ spring:
         registration:
           post-client-oidc:
             provider: spring
-            client-id: comment-service
+            client-id: story-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
           post-client:
             provider: spring
-            client-id: comment-service
+            client-id: story-service
             client-secret: secret
             authorization-grant-type: client_credentials
         provider:
@@ -93,13 +93,13 @@ spring:
         registration:
           post-client-oidc:
             provider: spring
-            client-id: comment-service
+            client-id: story-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
           post-client:
             provider: spring
-            client-id: comment-service
+            client-id: story-service
             client-secret: secret
             authorization-grant-type: client_credentials
         provider:
@@ -144,13 +144,13 @@ spring:
         registration:
           post-client-oidc:
             provider: spring
-            client-id: comment-service
+            client-id: story-service
             client-secret: secret
             authorization-grant-type: client_credentials
             scope: openid
           post-client:
             provider: spring
-            client-id: comment-service
+            client-id: story-service
             client-secret: secret
             authorization-grant-type: client_credentials
         provider:

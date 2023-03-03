@@ -63,7 +63,7 @@ security:
     comment-service:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-      id: comment-service
+      id: story-service
       uris:
         - http://127.0.0.1:7001
       scopes:
@@ -217,7 +217,7 @@ security:
     comment-service:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-      id: comment-service
+      id: story-service
       uris:
         - http://comment-service:7001
       scopes:
@@ -366,7 +366,7 @@ security:
     comment-service:
       refresh-token-access-time-to-leave: 8000
       token-access-time-to-leave: 8000
-      id: comment-service
+      id: story-service
       uris:
         - http://comment-service:7001
       scopes:

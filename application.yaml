@@ -79,6 +79,12 @@ client:
   srvPost:
     url: http://localhost:9999/post
     name: srvPost
+  comment:
+    url: http://localhost:9999/comment
+    name: comment
+  srvComment:
+    url: http://localhost:9999/comment
+    name: srvComment
 api:
   authorizationUrl: ${client.authentication.url}
   tokenUrl: ${client.authentication.url}/oauth2/token
@@ -108,11 +114,18 @@ client:
     url: http://proxy-service:9999/profile
     name: srvProfile
   post:
-    url: http://localhost:9999/post
+    url: http://proxy-service:9999/post
     name: post
   srvPost:
-    url: http://localhost:9999/post
+    url: http://proxy-service:9999/post
     name: srvPost
+  comment:
+    url: http://proxy-service:9999/comment
+    name: comment
+  srvComment:
+    url: http://proxy-service:9999/comment
+    name: srvComment
+
 api:
   authorizationUrl: ${client.authentication.url}
   tokenUrl: ${client.authentication.url}/oauth2/token
@@ -142,11 +155,17 @@ client:
     url: http://proxy-service:9999/profile
     name: srvProfile
   post:
-    url: http://localhost:9999/post
+    url: http://proxy-service:9999/post
     name: post
   srvPost:
-    url: http://localhost:9999/post
+    url: http://proxy-service:9999/post
     name: srvPost
+  comment:
+    url: http://proxy-service:9999/comment
+    name: comment
+  srvComment:
+    url: http://proxy-service:9999/comment
+    name: srvComment
 api:
   authorizationUrl: ${client.authentication.url}
   tokenUrl: ${client.authentication.url}/oauth2/token

@@ -55,14 +55,14 @@ spring:
             issuer-uri: http://auth-server:9000
 mail:
   protocol: "smtp"
-  host: "smtp.gmail.com"
-  port: 587
-  username: "mail@mail.com"
-  password: "password"
+  host: "smtp.mailosaur.net"
+  port: 25
+  username: "w1clmwei@mailosaur.net"
+  password: "{cipher}e0770e7cb7806f8bb10621d3274065746ec679b1672775e2cd45432ab1595d77d73177e25ca59f109e147bafb3ec31c54b8e8d277b629579e06c462085e8afe0"
   defaultEncoding: "UTF-8"
   auth: true
   debug: true
-  enable-tls: true
+  enable-tls: false
 ---
 spring:
   config:

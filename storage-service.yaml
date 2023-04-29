@@ -132,6 +132,8 @@ image-sizes:
       width: 1200
       height: 628
       name: "gramify_ad"
+
+
 ---
 spring:
   config:

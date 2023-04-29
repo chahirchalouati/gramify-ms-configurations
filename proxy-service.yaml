@@ -58,6 +58,10 @@ spring:
           uri: http://127.0.0.1:7008
           predicates:
             - Path=/notification/**
+        - id: webSocket-service
+          uri: ws://127.0.0.1:61613
+          predicates:
+            - Path=/ws/**
   security:
     oauth2:
       resourceserver:

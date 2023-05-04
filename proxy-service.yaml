@@ -62,6 +62,10 @@ spring:
           uri: ws://127.0.0.1:61613
           predicates:
             - Path=/ws/**
+        - id: user-info-service
+          uri: http://127.0.0.1:7011
+          predicates:
+            - Path=/user-info/**
   security:
     oauth2:
       resourceserver:
@@ -146,7 +150,10 @@ spring:
           uri: http://notification-service:7008
           predicates:
             - Path=/notification/**
-
+        - id: user-info-service
+          uri: http://user-info-service:7011
+          predicates:
+            - Path=/user-info/**
   security:
     oauth2:
       resourceserver:
@@ -231,6 +238,10 @@ spring:
           uri: http://notification-service:7008
           predicates:
             - Path=/notification/**
+        - id: user-info-service
+          uri: http://user-info-service:7011
+          predicates:
+            - Path=/user-info/**
   security:
     oauth2:
       client:

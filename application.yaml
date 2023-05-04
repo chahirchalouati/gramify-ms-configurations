@@ -12,7 +12,7 @@ api:
   version: 1.0.0
   termsOfService: https://www.crcl.com/terms
   contactName: Chahir Chalouati
-  contactEmail: chahir_chalouati@example.com
+  contactEmail: chahir_chalouati@crcl.com
   licenseName: MIT
   licenseUrl: https://opensource.org/licenses/MIT
 image-sizes:

@@ -141,7 +141,16 @@ security:
         - openid
       grantTypes:
         - client_credentials
-
+    user-info-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: user-info-service
+      uris:
+        - http://127.0.0.1:70011
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
 
 minio:
   access-key: myaccesskey
@@ -280,7 +289,7 @@ security:
       token-access-time-to-leave: 8000
       id: media-processor-service
       uris:
-        - http://127.0.0.1:7012
+        - http://media-processor-service:7012
       scopes:
         - openid
       grantTypes:
@@ -290,11 +299,22 @@ security:
       token-access-time-to-leave: 8000
       id: story-service
       uris:
-        - http://127.0.0.1:7002
+        - http://story-service:7002
       scopes:
         - openid
       grantTypes:
         - client_credentials
+    user-info-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: user-info-service
+      uris:
+        - http://user-info-service:70011
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
+
 minio:
   access-key: myaccesskey
   url: http://minio:47017
@@ -429,7 +449,7 @@ security:
       token-access-time-to-leave: 8000
       id: media-processor-service
       uris:
-        - http://127.0.0.1:7012
+        - http://media-processor-service:7012
       scopes:
         - openid
       grantTypes:
@@ -439,11 +459,22 @@ security:
       token-access-time-to-leave: 8000
       id: story-service
       uris:
-        - http://127.0.0.1:7002
+        - http://story-service:7002
       scopes:
         - openid
       grantTypes:
         - client_credentials
+    user-info-service:
+      refresh-token-access-time-to-leave: 8000
+      token-access-time-to-leave: 8000
+      id: user-info-service
+      uris:
+        - http://user-info-service:70011
+      scopes:
+        - openid
+      grantTypes:
+        - client_credentials
+
 minio:
   access-key: myaccesskey
   url: http://minio:47017
